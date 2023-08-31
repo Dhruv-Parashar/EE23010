@@ -1,0 +1,278 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{gvv}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{ 
+%	\logo{
+Solution of 11.16.3.14
+%	}
+}
+\author{ Dhruv Parashar-EE22BTECH11019
+}	
+%\title{
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{<-this % stops a space
+%\thanks{}}
+%}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+Question:-
+If the letters of the word ASSASSINATION are arranged at random. Find the Probability that
+\begin{enumerate}[label=(\alph*)]
+\item Four $S's$ come consecutively in the word
+\item Two  $I's$ and two $N's$ come together
+\item All $A's$ are not coming together
+\item No two $A's$ are coming together
+\end{enumerate}
+\solution 
+Number of letters in word 'ASSASSINATION' = $13$\\
+Letter's are $3A's, 4S's, 2I's, 2N's, 1T's \text{ and } 1O's$\\
+
+\begin{tabular}{|c|c|c|} \hline
+Variable & Description & Value\\\hline
+$S$ & Total ways to arrange letters & $S$\\\hline
+$E_1$ & $4S's$ together & $E_1$\\\hline
+$E_2$ & $2I's$ and $2N's$ together & $E_2$\\\hline
+$E_3$ & All $A's$ together &  $E_3$ \\\hline
+$E_4$ & No $2A's$ together & $E_4$\\\hline 
+
+\end{tabular}\\
+
+Total ways to arrange the letters:
+\begin{align}
+ n(S)
+= \frac{13!}{3!4!2!2!} 
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item Grouping $4S's$ together \\
+Now number of letters is $10$ i.e., $(SSSS), N, N, I, I, A, A, A, T, O$
+\begin{align}
+n(E_1) &= \frac{10!}{3!2!2!}\\
+P\brak{E_1}&= \frac{n(E_1)}{n(S)}\\ &= \frac{\frac{10!}{3!2!2!}}{\frac{13!}{3!4!2!2!}}\\
+&=\frac{2}{143}
+\end{align}
+\item $2I's$ and $2N's$ come together\\
+Number of letters is $10$ i.e., $(IINN),A,A,A,S,S,S,S,T,O$
+\begin{align}
+n(E_2) &= \frac{10!}{3!4!} \times \frac{4!}{2!2!}\\
+P\brak{E_2} &= \frac{n(E_2)}{n(S)}\\ &= \frac{\frac{10!4!}{3!4!2!2!}}{\frac{13!}{3!4!2!2!}}\\
+&= \frac{2}{143}
+\end{align}
+\item Grouping $3A's$ together\\
+Number of letters is $11$ i.e., $(AAA),S,S,S,S,I,I,N,N,T,O$
+\begin{align}
+n(E_3) &= \frac{11!}{4!2!2!}\\
+P\brak{E_3} &= \frac{n(E_3)}{n(S)} \\ &= \frac{\frac{11!}{4!2!2!}}{\frac{13!}{3!4!2!2!}}\\ &=\frac{1}{26}\\
+P\brak{E_3'}&= 1-\frac{1}{26}\\ &=\frac{25}{26}
+\end{align}
+\item No $2A's$ together\\
+Arranging alphabets except $A's$ i.e., $S,S,S,S,I,I,N,N,T,O$
+\begin{align}
+\text{Number of ways} = \frac{10!}{4!2!2!}
+\end{align}
+$11$ vacant places are present between these alphabets\\
+Three gaps for $3A's$ can be selected in $\comb{11}{3}$ ways
+\begin{align}
+n(E_4) &= \comb{11}{3} \times \frac{10!}{4!2!2!}\\
+P\brak{E_4} &= \frac{n(E_4)}{n(S)}\\&= \frac{\frac{11!10!}{3!8!4!2!2!}}{\frac{13!}{3!4!2!2!}}\\
+&=\frac{15}{26}
+\end{align}
+\end{enumerate}
+
+\end{document}
+
+
